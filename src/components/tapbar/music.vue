@@ -31,7 +31,6 @@ export default {
     created() {
     },
     mounted(){
-      this.play(this.$store.state.musicList[0])
     },
     methods:{
         play(music){

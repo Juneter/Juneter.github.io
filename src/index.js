@@ -17,7 +17,6 @@ import {
     SwipeItem,
 } from 'mint-ui';
 
-// import { resolve } from 'path';
 
 Vue.component(TabItem.name, TabItem);
 Vue.component(Swipe.name, Swipe);
@@ -41,7 +40,7 @@ var store = new Vuex.Store({
             id: '',
             name: '暂无播放音乐',
             singer:'',
-            pic: './src/images/placeholder_disk_play_program.png',
+            pic: '../src/images/defaultPIC.png',
             src: '',
         }]
     },

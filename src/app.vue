@@ -8,24 +8,28 @@
             <router-view></router-view>
         </transition>
         <div class="musicPlayBox">
-            <audio @error="errMsg"
-                   @ended="nextPlay"
+            <audio
+                @error="errMsg"
+                @ended="nextPlay"
                 ref="audioObj"
                 :src="$store.state.audio.src"
                 id="musicObj"
                 autoplay
             ></audio>
-            <div class="musicPic" :class="{ musicPicRun : $store.state.playing }">
+            <div
+                class="musicPic"
+                :class="{ musicPicRun: $store.state.playing }"
+            >
                 <img :src="$store.state.audio.pic" alt="" />
             </div>
             <div class="musicInfo">
-                <p class="musicTitle">{{$store.state.audio.name}}</p>
-                <p class="singer">{{$store.state.audio.singer}}</p>
+                <p class="musicTitle">{{ $store.state.audio.name }}</p>
+                <p class="singer">{{ $store.state.audio.singer }}</p>
             </div>
             <div class="control">
                 <i class="icon-prev" @click="prevPlay"></i>
                 <i
-                    :class="$store.state.playing  ? 'icon-puase' : 'icon-play'"
+                    :class="$store.state.playing ? 'icon-puase' : 'icon-play'"
                     @click="togglePlay"
                 ></i>
                 <i class="icon-next" @click="nextPlay"></i>
@@ -35,15 +39,14 @@
 </template>
 
 <script>
-import {Toast} from 'mint-ui';
+import { Toast } from "mint-ui";
 
 export default {
     data() {
-        return {
-        };
+        return {};
     },
-    mounted(){
-      this.getMusicList();
+    mounted() {
+        this.getMusicList();
     },
     methods: {
         getMusicList() {
@@ -51,30 +54,30 @@ export default {
         },
         togglePlay() {
             if (this.$store.state.playing) {
-                document.getElementById('musicObj').pause();
-                this.$store.commit('pause');
+                document.getElementById("musicObj").pause();
+                this.$store.commit("pause");
             } else {
-                document.getElementById('musicObj').play();
-                this.$store.commit('Playing');
+                document.getElementById("musicObj").play();
+                this.$store.commit("Playing");
             }
         },
-        prevPlay(){
-            this.$store.commit('prevPlay');
-            this.$store.commit('Playing');
+        prevPlay() {
+            this.$store.commit("prevPlay");
+            this.$store.commit("Playing");
         },
-        nextPlay(){
-            this.$store.commit('nextPlay');
-            this.$store.commit('Playing');
+        nextPlay() {
+            this.$store.commit("nextPlay");
+            this.$store.commit("Playing");
         },
-        errMsg(){
-            if(!document.getElementById('musicObj').currentSrc){
-                return
+        errMsg() {
+            if (!document.getElementById("musicObj").currentSrc) {
+                return;
             }
             Toast({
-                message: '歌曲加载失败,请尝试播放其他歌曲。',
-                duration: '1000'
+                message: "歌曲加载失败,请尝试播放其他歌曲。",
+                duration: "1000"
             });
-            this.$store.commit('pause');
+            this.$store.commit("pause");
         }
     }
 };
@@ -134,7 +137,7 @@ export default {
         a {
             color: rgb(255, 255, 255);
         }
-        .active {
+        .router-link-exact-active {
             font-size: 20px;
             font-weight: bold;
             color: rgb(255, 255, 255);
