@@ -11,8 +11,8 @@
 export default {
     data() {
         return {
-            OneWord: '',
-            OneWordFrom: '',
+            OneWord: "",
+            OneWordFrom: "",
             OneWordFlag: false
         };
     },
@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         getOneWord() {
-            this.axios.get('https://v1.hitokoto.cn').then(response => {
+            this.axios.get("https://v1.hitokoto.cn").then(response => {
                 this.OneWord = response.data.hitokoto;
                 this.OneWordFrom = response.data.from;
                 if (this.OneWordFlag == false) {
@@ -38,12 +38,12 @@ export default {
 
 <style lang="less" scoped>
 .OneBox {
-    height: 100%;
+    min-height: 550px;
     background: url(../../images/oneBackground.jpg) no-repeat 100% fixed;
     background-size: cover;
     .OneWord {
         text-align: center;
-        padding: 40% 20px 0 20px;
+        padding: 30% 20px 0 20px;
         opacity: 0.7;
         color: rgb(238, 232, 232);
         h3 {

@@ -8,14 +8,7 @@
             <router-view></router-view>
         </transition>
         <div class="musicPlayBox">
-            <audio
-                @error="errMsg"
-                @ended="nextPlay"
-                ref="audioObj"
-                :src="$store.state.audio.src"
-                id="musicObj"
-                autoplay
-            ></audio>
+            <audio @error="errMsg" @ended="nextPlay" ref="audioObj" :src="$store.state.audio.src" id="musicObj" autoplay></audio>
             <div
                 class="musicPic"
                 :class="{ musicPicRun: $store.state.playing }"
@@ -115,7 +108,6 @@ export default {
     padding-top: 45px;
     padding-bottom: 45px;
     overflow-x: hidden;
-    height: 100%;
     .nav-top {
         border-top: 1px solid #818181;
         height: 45px;
