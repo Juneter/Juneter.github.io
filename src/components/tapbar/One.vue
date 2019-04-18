@@ -38,7 +38,7 @@ export default {
 
 <style lang="less" scoped>
 .OneBox {
-    min-height: 550px;
+    min-height: 500px;
     background: url(../../images/oneBackground.jpg) no-repeat 100% fixed;
     background-size: cover;
     .OneWord {
