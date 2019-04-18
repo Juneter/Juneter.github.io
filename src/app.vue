@@ -39,45 +39,47 @@
 </template>
 
 <script>
-import { Toast } from "mint-ui";
+import { Toast } from 'mint-ui';
 
 export default {
     data() {
         return {};
     },
-    mounted() {
+    created () {
         this.getMusicList();
+    },
+    mounted() {
     },
     methods: {
         getMusicList() {
-            this.$store.dispatch("getMusicList");
+            this.$store.dispatch('getMusicList');
         },
         togglePlay() {
             if (this.$store.state.playing) {
-                document.getElementById("musicObj").pause();
-                this.$store.commit("pause");
+                document.getElementById('musicObj').pause();
+                this.$store.commit('pause');
             } else {
-                document.getElementById("musicObj").play();
-                this.$store.commit("Playing");
+                document.getElementById('musicObj').play();
+                this.$store.commit('Playing');
             }
         },
         prevPlay() {
-            this.$store.commit("prevPlay");
-            this.$store.commit("Playing");
+            this.$store.commit('prevPlay');
+            this.$store.commit('Playing');
         },
         nextPlay() {
-            this.$store.commit("nextPlay");
-            this.$store.commit("Playing");
+            this.$store.commit('nextPlay');
+            this.$store.commit('Playing');
         },
         errMsg() {
-            if (!document.getElementById("musicObj").currentSrc) {
+            if (!document.getElementById('musicObj').currentSrc) {
                 return;
             }
             Toast({
-                message: "歌曲加载失败,请尝试播放其他歌曲。",
-                duration: "1000"
+                message: '歌曲加载失败,请尝试播放其他歌曲。',
+                duration: '1000'
             });
-            this.$store.commit("pause");
+            this.$store.commit('pause');
         }
     }
 };
@@ -144,7 +146,7 @@ export default {
         }
     }
     .musicPlayBox {
-        height: 40px;
+        height: 50px;
         width: 100%;
         position: fixed;
         bottom: 0;
@@ -153,7 +155,7 @@ export default {
         border-top: 1px solid #57555560;
         display: flex;
         justify-content: space-between;
-        padding: 0 10px;
+        padding: 0 20px;
         box-sizing: border-box;
         box-shadow: 0px 18px 30px 1px rgb(90, 90, 90);
         align-items: center;

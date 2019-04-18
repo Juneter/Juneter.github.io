@@ -11,8 +11,8 @@
 export default {
     data() {
         return {
-            OneWord: "",
-            OneWordFrom: "",
+            OneWord: '',
+            OneWordFrom: '',
             OneWordFlag: false
         };
     },
@@ -21,7 +21,7 @@ export default {
     },
     methods: {
         getOneWord() {
-            this.axios.get("https://v1.hitokoto.cn").then(response => {
+            this.axios.get('https://v1.hitokoto.cn').then(response => {
                 this.OneWord = response.data.hitokoto;
                 this.OneWordFrom = response.data.from;
                 if (this.OneWordFlag == false) {

@@ -4,11 +4,11 @@ import Music from './components/tapbar/music.vue';
 
 var router = new VueRouter({
     routes:[
-        {path: '/', redirect:'/Music'},
+        {path: '/', redirect:'/music'},
         {path: '/One', component: One },
         {path: '/music', component: Music }
     ],
-    linkActiveClass: "active"
+    linkActiveClass: 'active'
 })
 
 export default router

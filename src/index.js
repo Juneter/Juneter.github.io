@@ -28,9 +28,9 @@ var store = new Vuex.Store({
         audio: {
             index: 0,
             id: '',
-            name: '歌曲名称',
-            singer: '演唱者',
-            pic: './src/images/placeholder_disk_play_program.png',
+            name: '暂无播放音乐',
+            singer: '',
+            pic: '../src/images/defaultPIC.png',
             src: ''
         },
         playing: true,
@@ -38,7 +38,7 @@ var store = new Vuex.Store({
         musicList: [{
             index: '',
             id: '',
-            name: '暂无播放音乐',
+            name: '',
             singer:'',
             pic: '../src/images/defaultPIC.png',
             src: '',

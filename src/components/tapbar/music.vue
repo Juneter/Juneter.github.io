@@ -129,6 +129,7 @@ export default {
 .musicListBox {
     ul {
         list-style: none;
+        cursor: pointer;
         li {
             font-size: 12px;
             padding-left: 20px;
@@ -147,6 +148,9 @@ export default {
                 font-size: 8px;
                 color: #666;
             }
+            // li::active{
+            //     background-color: rgb(161, 161, 161);
+            // }
         }
         .playing {
             font-size: 13px;
