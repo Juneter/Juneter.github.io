@@ -113,7 +113,7 @@ export default {
 }
 .app-content {
     padding-top: 45px;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
     overflow-x: hidden;
     height: 100%;
     .nav-top {
@@ -146,7 +146,7 @@ export default {
         }
     }
     .musicPlayBox {
-        height: 50px;
+        height: 45px;
         width: 100%;
         position: fixed;
         bottom: 0;
@@ -204,17 +204,19 @@ export default {
         }
         .icon-play::before {
             content: "\e62d";
-            font-size: 26px;
+            font-size: 30px;
         }
         .icon-puase::before {
             content: "\e62c";
-            font-size: 26px;
+            font-size: 30px;
         }
         .icon-next::before {
             content: "\e7ff";
+            font-size: 20px;
         }
         .icon-prev::before {
             content: "\e800";
+            font-size: 20px;
         }
     }
 }
