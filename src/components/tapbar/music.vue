@@ -48,45 +48,21 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@font-face {
-    font-family: "icomoon";
-    src: url("../../fonts/icomoon.eot?n79j95");
-    src: url("../../fonts/icomoon.eot?n79j95#iefix") format("embedded-opentype"),
-        url("../../fonts/icomoon.ttf?n79j95") format("truetype"),
-        url("../../fonts/icomoon.woff?n79j95") format("woff"),
-        url("../../fonts/icomoon.svg?n79j95#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
-[class^="icon-"],
-[class*=" icon-"] {
-    font-family: "icomoon" !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+@import '../../style/font.css';
 
 @media screen and (min-width: 320px) {
     .mint-swipe {
-        height: 200px;
+        height: 170px;
     }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 600px) {
     .mint-swipe {
-        height: 450px;
+        height: 300px;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
     .mint-swipe {
-        height: 600px;
+        height: 500px;
     }
 }
 

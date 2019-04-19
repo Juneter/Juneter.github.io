@@ -79,31 +79,9 @@ export default {
 </script>
 
 <style lang="less">
-@font-face {
-    font-family: "icomoon";
-    src: url("../src/fonts/icomoon.eot?n79j95");
-    src: url("../src/fonts/icomoon.eot?n79j95#iefix")
-            format("embedded-opentype"),
-        url("../src/fonts/icomoon.ttf?n79j95") format("truetype"),
-        url("../src/fonts/icomoon.woff?n79j95") format("woff"),
-        url("../src/fonts/icomoon.svg?n79j95#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
+@import './style/base.css';
+@import './style/font.css';
 
-[class^="icon-"],
-[class*=" icon-"] {
-    font-family: "icomoon" !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 .app-content {
     padding-top: 45px;
     padding-bottom: 45px;
@@ -219,6 +197,7 @@ export default {
 .v-leave-to {
     opacity: 0;
     transform: translateX(-100%);
+    position: absolute;
 }
 .v-enter-active,
 .v-leave-active {

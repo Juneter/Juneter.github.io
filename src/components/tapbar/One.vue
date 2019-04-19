@@ -37,13 +37,24 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@media screen and (min-width: 320px) {
+    .OneBox {
+        background: url(../../images/oneBackground.jpg) center no-repeat fixed;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .OneBox {
+        background: url(../../images/oneBackgroundPC.jpg) center no-repeat fixed;
+    }
+}
+
 .OneBox {
-    min-height: 500px;
-    background: url(../../images/oneBackground.jpg) no-repeat 100% fixed;
+    min-height: 800px;
     background-size: cover;
     .OneWord {
         text-align: center;
-        padding: 30% 20px 0 20px;
+        padding: 20% 20px 0 20px;
         opacity: 0.7;
         color: rgb(238, 232, 232);
         h3 {
