@@ -13,11 +13,10 @@
                 class="musicPic"
                 :class="{ musicPicRun: $store.state.playing }"
             >
-                <img :src="$store.state.audio.pic" alt="" />
+                <img :src="$store.state.audio.album.blurPicUrl" alt="" />
             </div>
             <div class="musicInfo">
                 <p class="musicTitle">{{ $store.state.audio.name }}</p>
-                <p class="singer">{{ $store.state.audio.singer }}</p>
             </div>
             <div class="control">
                 <i class="icon-prev" @click="prevPlay"></i>

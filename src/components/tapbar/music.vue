@@ -15,7 +15,7 @@
             <ul class="musicList">
                 <li v-for="item in $store.state.musicList" :key="item.id" @click="play(item)" :class="item.src == $store.state.audio.src ? 'playing': ''">
                     <span class="musicName"> {{ item.name }}</span>-----
-                    <span class="singer">{{ item.singer }}</span>
+                    <span class="singer">{{ item.artists[0].name }}</span>
                 </li>
             </ul>
         </div>
@@ -42,6 +42,7 @@ export default {
             this.$store.commit('getSong',music);
             document.getElementById('musicObj').play()
             this.$store.commit('Playing')
+            console.log(music)
         }
     }
 };

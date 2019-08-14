@@ -26,8 +26,9 @@ let store = new Vuex.Store({
       index: 0,
       id: '',
       name: '暂无播放音乐',
-      singer: '',
-      pic: '../src/images/defaultPIC.png',
+      album: {
+        blurPicUrl: '../src/images/defaultPIC.png'
+      },
       src: ''
     },
     playing: false,
@@ -36,8 +37,10 @@ let store = new Vuex.Store({
       index: '',
       id: '',
       name: '',
-      singer: '',
-      pic: '../src/images/defaultPIC.png',
+      artists: '',
+      album: {
+        blurPicUrl: '../src/images/defaultPIC.png'
+      },
       src: ''
     }]
   },
@@ -69,11 +72,11 @@ let store = new Vuex.Store({
   },
   actions: {
     getMusicList (context) {
-      axios.get('https://api.itooi.cn/music/netease/songList?key=579621905&id=2481538169&limit=10&offset=0').then(response => {
+      axios.get('https://v1.itooi.cn/netease/songList?id=2886425294').then(response => {
         if (response.data.code === 200) {
-          context.state.musicList = response.data.data.songs
+          context.state.musicList = response.data.data.tracks
           for (let i = 0; i < context.state.musicList.length; i++) {
-            context.state.musicList[i].src = `https://api.itooi.cn/music/netease/url?key=579621905&id=${context.state.musicList[i].id}&br=999000`
+            context.state.musicList[i].src = `https://v1.itooi.cn/netease/url?id=${context.state.musicList[i].id}&quality=flac`
             context.state.musicList[i].index = i
           }
         }

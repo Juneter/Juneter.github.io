@@ -10,3 +10,5 @@ Vue全家桶编写的一个简易音乐webapp,部分采用了Mint的UI框架.
 运行:
   npm i;
   npm run start;
+
+API 来源于 https://github.com/messoer.
